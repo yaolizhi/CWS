@@ -26,6 +26,16 @@
     return self;
 }
 
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self didInitialize];
+    }
+    return self;
+}
+
 - (void)didInitialize {
     // UIView.tintColor 并不支持 UIAppearance 协议，所以不能通过 appearance 来设置，只能在实例里设置
     UIColor *tintColor = TabBarTintColor;

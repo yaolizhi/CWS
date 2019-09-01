@@ -70,7 +70,7 @@
         make.left.equalTo(self.contentView).offset(ScaleW(14));
         make.right.equalTo(self.contentView).offset(-ScaleW(14));
         make.top.equalTo(self.addHeaderPhotoButton.mas_bottom).offset(ScaleH(65));
-        make.height.mas_equalTo(ScaleH(45));
+        make.height.mas_equalTo(ScaleW(45));
         make.bottom.equalTo(self.contentView);
     }];
 }
@@ -223,9 +223,8 @@
     if (!_saveButton) {
         _saveButton = [[UIButton alloc]init];
         [_saveButton setTitle:Localized(@"保存", nil) forState:UIControlStateNormal];
-        [_saveButton setTitleColor:kMainGaryWhiteColor forState:UIControlStateNormal];
-        _saveButton.layer.cornerRadius = ScaleW(5);
-        _saveButton.layer.masksToBounds = YES;
+        [_saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_saveButton setCornerRadius:ScaleW(45/2.0)];
         _saveButton.backgroundColor = kMainTitleColor;
         _saveButton.titleLabel.font = [UIFont systemFontOfSize:ScaleFont(15)];
         [_saveButton addTarget:self action:@selector(saveButtonClick) forControlEvents:UIControlEventTouchUpInside];

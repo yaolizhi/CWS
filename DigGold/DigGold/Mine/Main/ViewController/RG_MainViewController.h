@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RG_MainViewController : YNPageViewController
-- (instancetype)initWithMain;
+- (instancetype)init;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DigGold_BaseTabBarViewController.h"
 #import "RG_MainViewController.h"
 #import "DigGold_BaseNavigationController.h"
 #import "RG_Launch_ViewController.h"
@@ -55,9 +56,17 @@
 }
 
 - (void)gotoMain {
-    RG_MainViewController *rgMainVC = [[RG_MainViewController alloc]initWithMain];
-    DigGold_BaseNavigationController *navVC = [[DigGold_BaseNavigationController alloc]initWithRootViewController:rgMainVC];
-    self.window.rootViewController = navVC;
+    
+//    RG_MainViewController *rgMainVC = [[RG_MainViewController alloc]init];
+//    
+//    
+//    
+//    DigGold_BaseNavigationController *navVC = [[DigGold_BaseNavigationController alloc]initWithRootViewController:rgMainVC];
+    DigGold_BaseTabBarViewController *tabbar = [[DigGold_BaseTabBarViewController alloc]init];
+    
+    
+    
+    self.window.rootViewController = tabbar;
 }
 
 - (void)startNetWorkClick {

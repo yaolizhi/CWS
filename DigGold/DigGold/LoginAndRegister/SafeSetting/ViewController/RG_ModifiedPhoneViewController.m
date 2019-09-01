@@ -258,7 +258,7 @@ typedef void(^currentTitleBlock)(NSString *title);
         make.left.equalTo(self.contentView).offset(ScaleW(14));
         make.right.equalTo(self.contentView).offset(-ScaleW(14));
         make.top.equalTo(self.pwdTF.mas_bottom).offset(ScaleH(44));
-        make.height.mas_equalTo(ScaleH(45));
+        make.height.mas_equalTo(ScaleW(45));
         make.bottom.equalTo(self.contentView);
     }];
     
@@ -412,8 +412,7 @@ typedef void(^currentTitleBlock)(NSString *title);
         _saveButton = [[UIButton alloc]init];
         [_saveButton setTitle:Localized(@"保存", nil) forState:UIControlStateNormal];
         [_saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _saveButton.layer.cornerRadius = ScaleW(5);
-        _saveButton.layer.masksToBounds = YES;
+        [_saveButton setCornerRadius:ScaleW(45.0/2)];
         _saveButton.backgroundColor = kMainTitleColor;
         _saveButton.titleLabel.font = [UIFont systemFontOfSize:ScaleFont(15)];
         [_saveButton addTarget:self action:@selector(saveButtonClick) forControlEvents:UIControlEventTouchUpInside];

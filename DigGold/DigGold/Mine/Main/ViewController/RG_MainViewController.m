@@ -109,7 +109,7 @@ RG_Main_BottomViewDelegat>
     
 }
 
-- (instancetype)initWithMain
+- (instancetype)init
 {
     self = [super initPageViewControllerWithControllers:[self getArrayVCs]
                                                  titles:[self getArrayTitles]
@@ -357,7 +357,10 @@ RG_Main_BottomViewDelegat>
         [self.navigationController pushViewController:vc animated:YES];
     }
     if (menuType == RG_Main_TopMenuSelectedType_FAQ) {//FAQ
-        RG_FAQViewController *vc = [[RG_FAQViewController alloc]initWithSelectedType:RG_FAQType_QJ];
+//        RG_FAQViewController *vc = [[RG_FAQViewController alloc]initWithSelectedType:RG_FAQType_QJ];
+//        [self.navigationController pushViewController:vc animated:YES];
+        
+        RG_RankListViewController *vc = [[RG_RankListViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 //    if (menuType == RG_Main_TopMenuSelectedType_Lottery) {//开奖

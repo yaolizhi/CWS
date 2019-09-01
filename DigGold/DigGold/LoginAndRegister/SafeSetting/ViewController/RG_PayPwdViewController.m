@@ -245,7 +245,7 @@ typedef void(^currentTitleBlock)(NSString *title);
         make.left.equalTo(self.contentView).offset(ScaleW(14));
         make.right.equalTo(self.contentView).offset(-ScaleW(14));
         make.top.equalTo(self.pwdAgainTF.mas_bottom).offset(ScaleH(60));
-        make.height.mas_equalTo(ScaleH(45));
+        make.height.mas_equalTo(ScaleW(45));
         make.bottom.equalTo(self.contentView);
         
     }];
@@ -391,8 +391,7 @@ typedef void(^currentTitleBlock)(NSString *title);
         _sureButton = [[UIButton alloc]init];
         [_sureButton setTitle:Localized(@"确认", nil) forState:UIControlStateNormal];
         [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _sureButton.layer.cornerRadius = ScaleW(5);
-        _sureButton.layer.masksToBounds = YES;
+        [_sureButton setCornerRadius:ScaleW(45/2.0)];
         _sureButton.backgroundColor = kMainTitleColor;
         _sureButton.titleLabel.font = [UIFont systemFontOfSize:ScaleFont(15)];
         [_sureButton addTarget:self action:@selector(sureButtonClick) forControlEvents:UIControlEventTouchUpInside];

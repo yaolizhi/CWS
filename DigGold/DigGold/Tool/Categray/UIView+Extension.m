@@ -311,4 +311,10 @@
 };
 
 
+// 加载原始图片
++ (instancetype)imageWithOriginalName:(NSString *)imageName {
+    UIImage *image = [UIImage imageNamed:imageName];
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 @end

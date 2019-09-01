@@ -33,7 +33,7 @@ alpha:1.0]
 #define kLightLineColor UIColorFromRGB(0x495366)
 
 //灰白
-#define kMainGaryWhiteColor UIColorFromRGB(0xE4E5FF)
+#define kMainGaryWhiteColor UIColorFromRGB(0x8e94a3) //0xE4E5FF
 
 //黄色
 #define kMainYellowColor UIColorFromRGB(0xda744e)

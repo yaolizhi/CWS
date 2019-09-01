@@ -428,6 +428,8 @@
 		9686BCC5231A541500B728BD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9686BCBF231A541500B728BD /* LICENSE */; };
 		9686BCC6231A541500B728BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9686BCC0231A541500B728BD /* README.md */; };
 		9686BCCC231A5A0500B728BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9686BCCB231A5A0500B728BD /* Images.xcassets */; };
+		96F51059231B467E005F249E /* DigGold_BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F51058231B467E005F249E /* DigGold_BaseTabBarViewController.m */; };
+		96F5105C231B507A005F249E /* SwitchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5105B231B507A005F249E /* SwitchHelper.m */; };
 		D4501F522313C2E200C30C85 /* 750x13341.gif in Resources */ = {isa = PBXBuildFile; fileRef = D4501F512313C2E200C30C85 /* 750x13341.gif */; };
 		F11C49BB21D3706000B6396E /* RG_ScatteringFlowers_View.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C49BA21D3705F00B6396E /* RG_ScatteringFlowers_View.m */; };
 		F14599C921D1C2D2000B9F6E /* DigGold_Base_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14599C821D1C2D2000B9F6E /* DigGold_Base_ViewController.m */; };
@@ -1318,6 +1320,10 @@
 		9686BCBF231A541500B728BD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9686BCC0231A541500B728BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9686BCCB231A5A0500B728BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		96F51057231B467E005F249E /* DigGold_BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigGold_BaseTabBarViewController.h; sourceTree = "<group>"; };
+		96F51058231B467E005F249E /* DigGold_BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigGold_BaseTabBarViewController.m; sourceTree = "<group>"; };
+		96F5105A231B507A005F249E /* SwitchHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchHelper.h; sourceTree = "<group>"; };
+		96F5105B231B507A005F249E /* SwitchHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchHelper.m; sourceTree = "<group>"; };
 		D4501F512313C2E200C30C85 /* 750x13341.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 750x13341.gif; sourceTree = "<group>"; };
 		F11C49B921D3705F00B6396E /* RG_ScatteringFlowers_View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RG_ScatteringFlowers_View.h; sourceTree = "<group>"; };
 		F11C49BA21D3705F00B6396E /* RG_ScatteringFlowers_View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RG_ScatteringFlowers_View.m; sourceTree = "<group>"; };
@@ -1495,6 +1501,8 @@
 				1A677C6221D39E2100EF0131 /* Categray */,
 				1A677C7321D39E2100EF0131 /* WLTools.h */,
 				1A677C7B21D39E2100EF0131 /* WLTools.m */,
+				96F5105A231B507A005F249E /* SwitchHelper.h */,
+				96F5105B231B507A005F249E /* SwitchHelper.m */,
 				1A677C7421D39E2100EF0131 /* WL_KeyChainStore.h */,
 				1A677C7C21D39E2100EF0131 /* WL_KeyChainStore.m */,
 				1A9E974D21E4556200F7135B /* RegularExpression.h */,
@@ -3054,12 +3062,12 @@
 			isa = PBXGroup;
 			children = (
 				9686BAD5231A50F800B728BD /* QMUINavigationController.h */,
-				9686BAD6231A50F800B728BD /* QMUICommonViewController.m */,
-				9686BAD7231A50F800B728BD /* QMUICommonTableViewController.h */,
-				9686BAD8231A50F800B728BD /* QMUITabBarViewController.h */,
 				9686BAD9231A50F800B728BD /* QMUINavigationController.m */,
 				9686BADA231A50F800B728BD /* QMUICommonViewController.h */,
+				9686BAD6231A50F800B728BD /* QMUICommonViewController.m */,
+				9686BAD8231A50F800B728BD /* QMUITabBarViewController.h */,
 				9686BADB231A50F800B728BD /* QMUITabBarViewController.m */,
+				9686BAD7231A50F800B728BD /* QMUICommonTableViewController.h */,
 				9686BADC231A50F800B728BD /* QMUICommonTableViewController.m */,
 			);
 			path = QMUIMainFrame;
@@ -3559,12 +3567,14 @@
 		F14599CA21D1C2DC000B9F6E /* base */ = {
 			isa = PBXGroup;
 			children = (
-				F14599C721D1C2D2000B9F6E /* DigGold_Base_ViewController.h */,
-				F14599C821D1C2D2000B9F6E /* DigGold_Base_ViewController.m */,
 				F14599CB21D1C482000B9F6E /* DigGold_BaseTitleView.h */,
 				F14599CC21D1C482000B9F6E /* DigGold_BaseTitleView.m */,
+				F14599C721D1C2D2000B9F6E /* DigGold_Base_ViewController.h */,
+				F14599C821D1C2D2000B9F6E /* DigGold_Base_ViewController.m */,
 				F1459A0521D1D54A000B9F6E /* DigGold_BaseNavigationController.h */,
 				F1459A0621D1D54A000B9F6E /* DigGold_BaseNavigationController.m */,
+				96F51057231B467E005F249E /* DigGold_BaseTabBarViewController.h */,
+				96F51058231B467E005F249E /* DigGold_BaseTabBarViewController.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -3964,6 +3974,7 @@
 				1AC19EF921F5C19C001F1F31 /* RG_AgencyBottomNumberView.m in Sources */,
 				1AC430B021E607D0002857A0 /* NSString+Conversion.m in Sources */,
 				1A9E25EA21D73D430041B16C /* RG_WithdrawAddressViewController.m in Sources */,
+				96F5105C231B507A005F249E /* SwitchHelper.m in Sources */,
 				9686BBD3231A50F900B728BD /* UITableView+QMUIStaticCell.m in Sources */,
 				9686BC30231A50F900B728BD /* NSAttributedString+QMUI.m in Sources */,
 				9686BA77231A50A500B728BD /* MJPropertyKey.m in Sources */,
@@ -4174,6 +4185,7 @@
 				1AC19EEA21F5A329001F1F31 /* RG_AgencyTopTitleView.m in Sources */,
 				1AC4309E21E5CBB0002857A0 /* YNPageScrollView.m in Sources */,
 				1AC430CD21E83236002857A0 /* RG_XiaZhuModel.m in Sources */,
+				96F51059231B467E005F249E /* DigGold_BaseTabBarViewController.m in Sources */,
 				1A9E976021E492A900F7135B /* ImageView.m in Sources */,
 				1A677D1621D62B2E00EF0131 /* RG_BP_HistoryViewController.m in Sources */,
 				9686BA76231A50A500B728BD /* NSString+MJExtension.m in Sources */,

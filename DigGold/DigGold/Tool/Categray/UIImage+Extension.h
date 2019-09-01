@@ -14,4 +14,8 @@
 
 + (UIImage *) imageFromURLString: (NSString *) urlstring;
 
+
+// 加载原始图片
++ (instancetype)imageWithOriginalName:(NSString *)imageName;
+
 @end
